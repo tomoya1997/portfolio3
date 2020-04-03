@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="background">
+        <div class="nav">
+            <a class="a active" href="#">HOME</a>
+            <a class="b" href="#">ABOUT ME</a>
+            <a class="c" href="#">GALLERY</a>
+            <a class="d" href="#">CONTACT ME</a>
+        </div>
+        <div class="content">
+            <div class="home">
+                <h1>I am Tomoya</h1>
+                <h3>Web Engineer</h3>
+            </div>
+            <div class="aboutme">
+                <p><b>神奈川出身の22歳</b></p>
+                <p>今年社会人になりました。</p>
+                <p>使用している言語は主にPHP->Laravel、JS->JQuery,Vue</p>
+                <p>趣味程度にPythonに触れています。</p>
+                <p>趣味は旅行、読書、物づくりです。</p>
+            </div>
+            <div class="gallery">
+                <div class="image">
+                    <img class="photo" src="images/IMG_1192.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+                <div class="image">
+                        <img class="photo" src="images/IMG_1191.jpg" alt="カメラ">
+                </div>
+            </div>
+            <div class="contactme">
+                <div class="contactform">
+                    <form action="index.html" method="POST">
+                        <input type="text" name="" value="" class="inputtext" placeholder="First Name">
+                        <input type="text" name="" value="" class="inputtext" placeholder="Last Name">
+                        <input type="text" name="" value="" class="inputtext" placeholder="Your Email">
+                        <textarea name="" id="" cols="4" rows="6" class="inputmessage" placeholder="Your Message...!!"></textarea>
+                        <input type="button" name="" class="submitbutton" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // 選択時のアニメーション
+            $('a').click(function(){
+                var selected = $(this);
+                $('a').removeClass('active');
+                $(selected).addClass('active');
+            })
+            // 画面遷移
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $home = $('.home'),
+            $aboutme = $('.aboutme'),
+            $gallery = $('.gallery'),
+            $contactme = $('.contactme');
+
+            $a.click(function(){
+                $home.fadeIn();
+                $aboutme.fadeOut();
+                $gallery.fadeOut();
+                $contactme.fadeOut();
+            });
+            $b.click(function(){
+                $aboutme.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $contactme.fadeOut();
+            });
+            $c.click(function(){
+                $gallery.fadeIn();
+                $home.fadeOut();
+                $aboutme.fadeOut();
+                $contactme.fadeOut();
+            });
+            $d.click(function(){
+                $contactme.fadeIn();
+                $gallery.fadeOut();
+                $home.fadeOut();
+                $aboutme.fadeOut();
+            });
+        })
+    </script>
+</html>

@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    font-weight: normal;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/IMG_1220.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow-y: auto;
+}
+.nav {
+    width: 350px;
+    height: auto;
+    position: fixed;
+    top: 20%;
+    right: 0;
+}
+.nav a {
+    text-decoration: none;
+    font-size: 28px;
+    font-family: Verdana;
+    font-weight: bold;
+    /* width: 100%; */
+    height: 90px;
+    margin: 5px 0;
+    float: right;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    line-height: 90px;
+    text-align: center;
+    transition: 300ms;
+}
+a.active, .nav a:hover {
+    background-color: white;
+    color: black; 
+    width: 100%;
+}
+.a {
+    width: 95%;
+}
+.b {
+    width: 85%;
+}
+.c {
+    width: 80%;
+}
+.d {
+    width: 90%;
+}
+.content {
+    position: absolute;
+    width: 930px;
+    min-height: 500px;
+    height: auto;
+    left: 0;
+    /* top: -35%; */
+}
+.home {
+    top: 15%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    color: white;
+    font-family: Verdana;
+}
+.home h1 {
+    font-size: 95px;
+    padding-left: 60px;
+    border-bottom: 1px solid white;
+    text-transform: uppercase;
+}
+.home h3 {
+    font-size: 28px;
+    padding: 5px 60px;
+    opacity: 0.6;
+}
+.aboutme {
+    position: absolute;
+    left: 0;
+    top: 25%;/* 35%プラス換算 */
+    color: white;
+    font-family: century gothic;
+    padding: 0 60px;
+    display: none;
+}
+.aboutme p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 15px;
+}
+.gallery {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    color: white;
+    padding: 0 60px;
+    display: none;
+}
+.gallery .image {
+    width: 31%;
+    margin: 1%;
+    float: left;
+}
+.gallery .image .photo {
+    width: 100%;
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+.gallery .image .photo:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+}
+.contactme {
+    position: absolute;
+    left: 5%;
+    top: 25%;
+    color: white;
+    padding: 0 60px;
+    display: none;
+}
+.inputtext {
+    width: 55%;
+    height: 65px;
+    border: 3px solid black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    padding: 0 10px;
+    float: left;
+    margin-bottom: 15px;
+}
+.inputmessage {
+    width: 55%;
+    height: 135px;
+    border: 3px solid black;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    padding: 0 10px;
+    float: left;
+}
+.submitbutton {
+    width: 160px;
+    height: 65px;
+    background-color: white;
+    color: black;
+    font-size: 28px;
+    font-family: Arial;
+    font-weight: bold;
+    border: none;
+    float: left;
+    clear: both;
+    margin-top: 25px;
+}
