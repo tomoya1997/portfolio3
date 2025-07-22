@@ -58,60 +58,16 @@
             </div>
             <div class="contactme">
                 <div class="contactform">
-                    <form action="index.html" method="POST">
-                        <input type="text" name="" value="" class="inputtext" placeholder="First Name">
-                        <input type="text" name="" value="" class="inputtext" placeholder="Last Name">
-                        <input type="text" name="" value="" class="inputtext" placeholder="Your Email">
-                        <textarea name="" id="" cols="4" rows="6" class="inputmessage" placeholder="Your Message...!!"></textarea>
-                        <input type="button" name="" class="submitbutton" value="Submit">
+                    <form>
+                        <input type="text" name="firstName" class="inputtext" placeholder="First Name" required>
+                        <input type="text" name="lastName" class="inputtext" placeholder="Last Name" required>
+                        <input type="email" name="email" class="inputtext" placeholder="Your Email" required>
+                        <textarea name="message" cols="4" rows="6" class="inputmessage" placeholder="Your Message...!!" required></textarea>
+                        <input type="submit" class="submitbutton" value="Submit">
                     </form>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-            // 選択時のアニメーション
-            $('a').click(function(){
-                var selected = $(this);
-                $('a').removeClass('active');
-                $(selected).addClass('active');
-            })
-            // 画面遷移
-            var $a = $('.a'),
-            $b = $('.b'),
-            $c = $('.c'),
-            $d = $('.d'),
-            $home = $('.home'),
-            $aboutme = $('.aboutme'),
-            $gallery = $('.gallery'),
-            $contactme = $('.contactme');
-
-            $a.click(function(){
-                $home.fadeIn();
-                $aboutme.fadeOut();
-                $gallery.fadeOut();
-                $contactme.fadeOut();
-            });
-            $b.click(function(){
-                $aboutme.fadeIn();
-                $home.fadeOut();
-                $gallery.fadeOut();
-                $contactme.fadeOut();
-            });
-            $c.click(function(){
-                $gallery.fadeIn();
-                $home.fadeOut();
-                $aboutme.fadeOut();
-                $contactme.fadeOut();
-            });
-            $d.click(function(){
-                $contactme.fadeIn();
-                $gallery.fadeOut();
-                $home.fadeOut();
-                $aboutme.fadeOut();
-            });
-        })
-    </script>
+    <script src="js/main.js"></script>
 </html>

@@ -8,6 +8,56 @@ html, body {
     font-size: 14px;
     font-weight: normal;
 }
+
+@media (max-width: 768px) {
+    .nav {
+        width: 100%;
+        position: relative;
+        top: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav a {
+        width: 90% !important;
+        margin: 2px 0;
+        font-size: 20px;
+        height: 60px;
+        line-height: 60px;
+        float: none;
+    }
+    
+    .content {
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .home h1 {
+        font-size: 48px;
+        padding-left: 20px;
+    }
+    
+    .home h3 {
+        font-size: 20px;
+        padding: 5px 20px;
+    }
+    
+    .aboutme, .gallery, .contactme {
+        position: relative;
+        left: 0;
+        top: 0;
+        padding: 20px;
+    }
+    
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
 .background {
     width: 100%;
     height: 100%;
@@ -29,7 +79,6 @@ html, body {
     font-size: 28px;
     font-family: Verdana;
     font-weight: bold;
-    /* width: 100%; */
     height: 90px;
     margin: 5px 0;
     float: right;
@@ -38,7 +87,7 @@ html, body {
     color: white;
     line-height: 90px;
     text-align: center;
-    transition: 300ms;
+    transition: all 0.3s ease;
 }
 a.active, .nav a:hover {
     background-color: white;
@@ -72,6 +121,8 @@ a.active, .nav a:hover {
     bottom: 0;
     color: white;
     font-family: Verdana;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 .home h1 {
     font-size: 95px;
@@ -87,11 +138,13 @@ a.active, .nav a:hover {
 .aboutme {
     position: absolute;
     left: 0;
-    top: 25%;/* 35%プラス換算 */
+    top: 25%;
     color: white;
     font-family: century gothic;
     padding: 0 60px;
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 .aboutme p {
     font-size: 18px;
@@ -105,22 +158,27 @@ a.active, .nav a:hover {
     color: white;
     padding: 0 60px;
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+}
+
 .gallery .image {
-    width: 31%;
-    margin: 1%;
-    float: left;
+    width: 100%;
 }
 .gallery .image .photo {
     width: 100%;
-    transition: all ease 0.5s;
-    -webkit-transition: all ease 0.5s;
+    height: auto;
+    transition: transform 0.5s ease;
     transform: scale(1);
-    -webkit-transform: scale(1);
 }
 .gallery .image .photo:hover {
-    transform: scale(1.2);
-    -webkit-transform: scale(1.2);
+    transform: scale(1.1);
 }
 .contactme {
     position: absolute;
@@ -129,28 +187,42 @@ a.active, .nav a:hover {
     color: white;
     padding: 0 60px;
     display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
+
+.contactform form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 15px;
+}
+
 .inputtext {
-    width: 55%;
+    width: 100%;
+    max-width: 400px;
     height: 65px;
     border: 3px solid black;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     font-size: 20px;
     padding: 0 10px;
-    float: left;
-    margin-bottom: 15px;
+    box-sizing: border-box;
 }
+
 .inputmessage {
-    width: 55%;
+    width: 100%;
+    max-width: 400px;
     height: 135px;
     border: 3px solid black;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
     font-size: 20px;
-    padding: 0 10px;
-    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+    resize: vertical;
 }
+
 .submitbutton {
     width: 160px;
     height: 65px;
@@ -160,7 +232,10 @@ a.active, .nav a:hover {
     font-family: Arial;
     font-weight: bold;
     border: none;
-    float: left;
-    clear: both;
-    margin-top: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitbutton:hover {
+    background-color: #f0f0f0;
 }

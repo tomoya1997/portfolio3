@@ -1,0 +1,19 @@
+{
+  "name": "portfolio3",
+  "version": "1.0.0",
+  "description": "Modern portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 8080",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "keywords": ["portfolio", "website"],
+  "author": "Tomoya",
+  "license": "MIT"
+}
