@@ -72,6 +72,8 @@ a.active, .nav a:hover {
     bottom: 0;
     color: white;
     font-family: Verdana;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }
 .home h1 {
     font-size: 95px;
@@ -92,6 +94,8 @@ a.active, .nav a:hover {
     font-family: century gothic;
     padding: 0 60px;
     display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 .aboutme p {
     font-size: 18px;
@@ -105,6 +109,8 @@ a.active, .nav a:hover {
     color: white;
     padding: 0 60px;
     display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
 }
 .gallery .image {
     width: 31%;
@@ -129,6 +135,13 @@ a.active, .nav a:hover {
     color: white;
     padding: 0 60px;
     display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+    opacity: 1;
 }
 .inputtext {
     width: 55%;
